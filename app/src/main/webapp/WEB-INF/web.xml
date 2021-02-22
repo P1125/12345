@@ -4,4 +4,44 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>AjaxServ</servlet-name>
+  	<display-name>AjaxServ</display-name>
+  	<description></description>
+  	<servlet-class>serv.AjaxServ</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FindName</servlet-name>
+  	<display-name>FindName</display-name>
+  	<description></description>
+  	<servlet-class>serv.FindName</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>JsonServ</servlet-name>
+  	<display-name>JsonServ</display-name>
+  	<description></description>
+  	<servlet-class>serv.JsonServ</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FindMember</servlet-name>
+  	<display-name>FindMember</display-name>
+  	<description></description>
+  	<servlet-class>serv.FindMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AjaxServ</servlet-name>
+  	<url-pattern>/AjaxServ</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FindName</servlet-name>
+  	<url-pattern>/FindName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JsonServ</servlet-name>
+  	<url-pattern>/JsonServ</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FindMember</servlet-name>
+  	<url-pattern>/FindMember</url-pattern>
+  </servlet-mapping>
 </web-app>
