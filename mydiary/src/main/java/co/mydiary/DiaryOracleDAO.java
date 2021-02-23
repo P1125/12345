@@ -3,6 +3,7 @@ package co.mydiary;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,8 +74,33 @@ public class DiaryOracleDAO implements DAO {
 	}
 
 	@Override // select * from diary where contents like '%' || ? || '%'
-	public List<DiaryVO> selectContent(String content) {
-		return null;
+	public ArrayList<DiaryVO> selectContent(String content) {
+		ArrayList<DiaryVO> list = new ArrayList<DiaryVO>();
+		DiaryVO vo =null;
+		try {
+			//1 연결 connect
+			conn = JdbcUtil.connect();
+			//2구문 statement
+			String sql = "SELECT * FROM DIARY WHERE CONTENTS LIKE '%' || ? || '%' ";
+			pstmt = conn.prepareStatement(sql);
+			//3 execute 실행
+			pstmt.setString(1, content);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				vo = new DiaryVO();
+				vo.setWdate(rs.getString("wdate"));
+				vo.setContents(rs.getString("contents"));
+				list.add(vo);
+			} 
+			// resultset ( select라면 조회결과처리) 
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			// 연결 해제
+			JdbcUtil.disconnect(conn);
+		}
+		
+		return list;
 	}
 
 	@Override//전체

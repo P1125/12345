@@ -133,7 +133,7 @@ public class DiaryApp {
 	// 내용검색
 	public void selectContent() {
 		System.out.println("내용검색");
-		String contents = StdInputUtil.readMultiLine();
+		String contents = StdInputUtil.readLine(); // multi enter까지먹음 MultiLine 경로 찾아가서 확인하기 .end 적혀있음
 		List<DiaryVO> list = dao.selectContent(contents);
 		list.stream().forEach(this::print);
 	}

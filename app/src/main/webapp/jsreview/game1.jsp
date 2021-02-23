@@ -23,10 +23,14 @@
 	}
 	function clickHandler(e) {
 		console.log(e.target.innerHTML, '클릭됨')
+	e.target.remove();
+	
 	} // 클릭된 태그를 삭제
 	
 	
 	//-> 모두삭제되면 모두 제거되었다고 메세지
+	// alert넣어도 삭제안됨 실패
+	
 	// document.getElementsByTagName("div") 몇개남았는지 .length붙여확인가능
 	//다되면 섞어보기(난수) 순서대로없애는게임.. + 시간재기 1to50 게임
 	var len = document.getElementsByTagName("div").length;

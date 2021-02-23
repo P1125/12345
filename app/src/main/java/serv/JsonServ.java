@@ -25,7 +25,7 @@ public class JsonServ extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");
-		response.getWriter().append("[\"홍길동\", \"김유신\"]");// Json구조의 String
+		response.getWriter().append("[\"홍길동\", \"김유신\"]");// Json구조의 String   배열0번  1번
 		
 	
 	}
