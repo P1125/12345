@@ -22,8 +22,8 @@ function loadDoc() {
   xhttp.onerror = function(){
 	  document.getElementById("demo").innerHTML += this.status;
   }
-  xhttp.open("GET", "../JsonServ", true);
-  //xhttp.open("GET", "../FindMember");
+ // xhttp.open("GET", "../JsonServ", true);
+  xhttp.open("GET", "../FindMember");
   //로딩중..
   xhttp.send();
 };

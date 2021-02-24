@@ -1,8 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <html>
 <head>
+<title>index.jsp</title>
 <style></style>
-
+<script>
+var n = localStorage
+			.getItem("name");
+		if ( n != null){
+			alert(n);
+		}	
+</script>
 </head>
 <body>
 	<h2>Hello World!</h2>

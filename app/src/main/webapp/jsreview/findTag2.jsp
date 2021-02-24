@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
-function calc2(){
+function calc1(){
 	var table = document.getElementById("tbl2");
 	
 	//합계 저장변수 선언

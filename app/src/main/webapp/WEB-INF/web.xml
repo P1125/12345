@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>serv.FindMember</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>BoardList</servlet-name>
+  	<display-name>BoardList</display-name>
+  	<description></description>
+  	<servlet-class>serv.BoardList</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AjaxServ</servlet-name>
   	<url-pattern>/AjaxServ</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>FindMember</servlet-name>
   	<url-pattern>/FindMember</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BoardList</servlet-name>
+  	<url-pattern>/BoardList</url-pattern>
   </servlet-mapping>
 </web-app>
